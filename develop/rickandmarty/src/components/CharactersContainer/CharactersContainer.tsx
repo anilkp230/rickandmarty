@@ -10,9 +10,9 @@ export default function CharactersContainer({selectedEpisode, characterList, sel
       )}
       <Grid container spacing={2}>
         {characterList && characterList.map(b => 
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={3}>
             <img className="CharacterImage" style={{border: '2px solid grey', maxWidth: '120px'}} key={b.id} src={b.image} />
-            <div>{b.name}</div>
+            {selectedEpisode && <div>{b.name}</div>}
           </Grid>
         )}
       </Grid>
